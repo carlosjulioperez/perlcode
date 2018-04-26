@@ -18,3 +18,10 @@ say @stack; #FredEileenDeniseBobAlice
 say shift @stack; #Fred
 say @stack; #EileenDeniseBobAlice
 
+#unshift inserts new elements at the beginning of the array
+unshift @stack, "Hang", "Grece";
+say @stack; #HangGreceEileenDeniseBobAlice
+
+#splice removes and returns an array slice, replacing it with a different array slice
+say splice (@stack, 1, 4, "<<<", ">>>"); #GreceEileenDeniseBob
+say @stack; # Hang<<<>>>Alice   
